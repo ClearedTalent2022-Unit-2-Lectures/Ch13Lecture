@@ -2,12 +2,10 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8"/>
-    <title th:text="${title}"></title>
+    <title></title>
 </head>
 <body>
-    <h1 th:text="${title}"></h1>
-
-    <h3 th:replace="fragments :: demoFragment1"></h3>
+  <h3 th:fragment="demoFragment1">This is a Thymeleaf fragment!</h3>
 
 </body>
 </html>

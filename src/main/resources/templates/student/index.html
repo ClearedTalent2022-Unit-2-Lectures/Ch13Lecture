@@ -7,5 +7,16 @@
 <body>
     <h1>Student Page</h1>
 
+<!--  Let's make it so that if the students list is empty -->
+<!--  that we display a message saying the student list is empty  -->
+
+    <ul th:if="${students.size() > 0}">
+<!--        for(String name : students) {} -->
+        <li th:each="name : ${students}" th:text="${name}"></li>
+    </ul>
+
+    <p th:unless="${students.size() > 0}">No students to display!</p>
+
+    <h3 th:replace="fragments :: demoFragment1"></h3>
 </body>
 </html>
